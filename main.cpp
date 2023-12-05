@@ -1,12 +1,23 @@
 #include <Novice.h>
-
+#include "InputHandle.h"
+#include "Player.h"
 const char kWindowTitle[] = "学籍番号";
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
+	
 	// ライブラリの初期化
 	Novice::Initialize(kWindowTitle, 1280, 720);
+
+	Player* player_ = new Player();
+	player_->Initiluze();
+
+	
+	InputHandler* inputHandler_ = new InputHandler();
+	ICommand* command_;
+	inputHandler_->AssignMoveRightCommandToPressKeyD();
+	inputHandler_->AssignMoveLeftCommandToPressKeyA();
 
 	// キー入力結果を受け取る箱
 	char keys[256] = {0};
@@ -24,7 +35,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓更新処理ここから
 		///
+		command_ = inputHandler_->HandleInput(keys);
 
+		// SetCommand
+		if (command_) {
+			command_->Exec(*player_);
+		}
+
+		// 更新
+		
 		///
 		/// ↑更新処理ここまで
 		///
@@ -32,7 +51,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		///
 		/// ↓描画処理ここから
 		///
-
+		player_->Draw();
 		///
 		/// ↑描画処理ここまで
 		///

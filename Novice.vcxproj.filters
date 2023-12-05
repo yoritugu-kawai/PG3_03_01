@@ -14,6 +14,9 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="key">
+      <UniqueIdentifier>{9193604f-f184-4605-b718-14b3fd299af9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -37,6 +40,21 @@
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>key</Filter>
+    </ClCompile>
+    <ClCompile Include="ICommand.cpp">
+      <Filter>key</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandA.cpp">
+      <Filter>key</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandD.cpp">
+      <Filter>key</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandle.cpp">
+      <Filter>key</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +128,21 @@
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h" />
     <ClInclude Include="C:\KamataEngine\DirectXGame\base\StringUtility.h">
       <Filter>KamataEngine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandD.h">
+      <Filter>key</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommand.h">
+      <Filter>key</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandA.h">
+      <Filter>key</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>key</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandle.h">
+      <Filter>key</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
